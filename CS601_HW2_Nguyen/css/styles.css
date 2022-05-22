@@ -76,7 +76,6 @@ hr.solid {
     opacity: 0.7;
 }
 
-
 .column {
     flex: 50%;
 }
@@ -85,6 +84,10 @@ hr.solid {
     padding: var(--page-padding);
     color: var(--primary-font);
     line-height: 150%;
+}
+
+.contact {
+    padding-left: 200px;
 }
 
 .gallery {
@@ -97,18 +100,20 @@ hr.solid {
 }
 
 table, td {
-    border: 2px dotted var(--primary-font);
+    border: 8px solid var(--primary-blue);
     border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table {
-    background-image: linear-gradient(60deg, var(--primary-blue), var(--primary-orange));
-    width: 100%;
+    width: 70%;
+    text-align: center;
 }
 
 td {
     padding: 8px;
-    border: 1px dashed;
+    border: 1px dashed var(--primary-blue);
     font-weight: bold;
 }
 
@@ -116,6 +121,17 @@ td {
     color: var(--primary-font);
     padding: var(--page-padding);
     line-height: 120%;
+}
+
+.contact-link {
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+.icon-div {
+    display: inline-block; 
+    vertical-align: middle; 
+    padding-right: 5px;
 }
 
 .footer {
@@ -131,15 +147,4 @@ td {
 
 .footer-email {
     float: right;
-}
-
-.contact-link {
-    display: inline-block; 
-    vertical-align: middle;
-}
-
-.icon-div {
-    display: inline-block; 
-    vertical-align:middle; 
-    padding-right: 5px;
 }
