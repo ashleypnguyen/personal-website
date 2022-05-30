@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <meta name="description" content="Calculator tool!">
+  <meta name="author" content="apnguyen@bu.edu">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="background">
+    <!-- Header section -->
+    <header>
+        <h1>Calculator Tool</h1>
+    </header>
+
+    <script> 
+        // Helper functions
+        function toTitleCase(input) {
+            let result;
+            // lowercase everything after the first letter
+            rest = input.toLowerCase().slice(1)
+
+            // combine the uppercase of first letter to the lowercased letters
+            result = input[0].toUpperCase() + rest
+            return result
+        }
+
+        function isValidNumber(input) {
+            const regex=/^[0-9]+$/
+            // match for digit numbers in the input string
+            if (input.match(regex)) {
+                return true
+            }
+            return false
+        }
+
+        function welcomeUser() {
+            let welcomeMsg;
+            let name;
+
+            alert("Welcome to the calculator tool! ")
+            name = prompt("Please enter your name: ", "")
+
+            if (name == null || name == ""){
+                welcomeMsg = "Welcome!"
+            } else {
+                welcomeMsg = "Welcome " + toTitleCase(name) + "!"
+            }
+
+            alert(welcomeMsg)
+        }
+
+        function calculateUserInput() {
+            let firstNumber;
+            let secondNumber;
+
+            firstNumber = prompt("Please enter a number: ")
+            const isCancelled = firstNumber == null
+
+            // ensure first input was entered 
+            if (!isCancelled && firstNumber.length > 0) {
+
+                // validate that a number was entered 
+                if (!isValidNumber(firstNumber)) {
+                    alert("You must enter a valid number (i.e. 2)")
+                    calculateUserInput()
+                }
+
+                secondNumber = prompt("Please enter another number: ")
+
+                // validate second number
+                if (!isValidNumber(secondNumber)) {
+                    alert("You must enter a valid number. Starting from the beginning!")
+                    calculateUserInput()
+                }
+
+                // assume second number is 0 if empty 
+                if (secondNumber.length == 0) {
+                    secondNumber = "0"
+                }
+
+                result = parseInt(firstNumber) + parseInt(secondNumber)
+                alert("The sum of your two numbers is: " + result)
+                
+                // custom conditional logic
+                if (result > 10) {
+                    alert("That is a big number.")
+                } else if (result <= 10) {
+                    alert("That is a small number.")
+                }
+
+                // custom loop
+                const doAgain = confirm("Do you want to add the two numbers again?")
+                
+                if (doAgain) {
+                    calculateUserInput()
+                } else {
+                    alert("Thank you for using the calculator tool!")
+                    return
+                }
+            }
+            else if (isCancelled) {
+                // break out of the prompt box if user hits cancel
+                return
+            } else {
+                // if nothing was entered, run the function again
+                calculateUserInput()
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+            // execute functions
+            welcomeUser()
+            calculateUserInput()
+        });
+
+     </script>
+     
+    <!-- Footer section -->
+    <footer class="footer">
+        <em class="footer-text">Author: Ashley Nguyen</em>
+        <em class="footer-email"><a href="mailto:apnguyen@bu.edu">apnguyen@bu.edu</a></em>
+    </footer>
+</body>
+</html>
