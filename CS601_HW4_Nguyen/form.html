@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <meta name="description" content="Form">
+  <meta name="author" content="apnguyen@bu.edu">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="scripts/validate.js"></script>
+</head>
+
+<body class="background">
+    <!-- Form -->
+    <form class="form" name="infoForm" action="https://bucs601.com/submit.php" onsubmit="return validateForm()" method="post">
+        <!-- Header section -->
+        <header>
+            <h1>Form</h1>
+            <hr>
+        </header>
+        <p id="error" class="error"></p>
+        
+        <label for="firstName">
+            First name
+            <sub class="subtext">Required Field</sub>
+        </label><br>
+        <input class="input" type="text" id="firstName" name="firstName">
+        <p id="firstNameError" class="error"></p>
+
+        <label for="lastName">
+            Last name 
+            <sub class="subtext">Required Field</sub>
+        </label><br>
+        <input class="input" type="text" id="lastName" name="lastName"><br>
+        <p id="lastNameError" class="error"></p>
+
+        <label for="facilitator">
+            Facilitator 
+            <sub class="subtext">Required Field</sub>
+        </label><br>
+        <input class="input" type="text" id="facilitator" name="facilitator"><br>
+        <p id="facilitatorError" class="error"></p>
+        <br>
+
+        <!-- Radio Group -->
+        <p>Please select your course of study:</p>
+        <input type="radio" id="masters" name="study" value="Masters">
+        <label for="masters">Masters</label><br>
+        <input type="radio" id="undergraduate" name="study" value="Undergraduate">
+        <label for="undergraduate">Undergraduate</label><br>  
+        <input type="radio" id="grad-cert" name="study" value="Graduate Certificate">
+        <label for="grad-cert">Graduate Certificate</label><br><br>
+
+        <!-- Check boxes -->
+        <p>Please select your favorite programming language:</p>
+        <input type="checkbox" id="java" name="language1" value="Java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" id="python" name="language2" value="Python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="javascript" name="language3" value="Javascript">
+        <label for="javascript">Javascript</label><br>
+        <input type="checkbox" id="c++" name="language4" value="C++">
+        <label for="c++">C++</label><br>
+        <input type="checkbox" id="other" name="language5" value="Other"> 
+        <label for="other">Other:</label>
+        <input class="input" type="text" id="otherLanguage" name="languageInput" placeholder="Optional">
+  
+
+        <!-- Submit button -->
+        <br><br>
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+     
+    <!-- Footer section -->
+    <footer class="footer">
+        <em class="footer-text">Author: Ashley Nguyen</em>
+        <em class="footer-email"><a href="mailto:apnguyen@bu.edu">apnguyen@bu.edu</a></em>
+    </footer>
+</body>
+</html>
