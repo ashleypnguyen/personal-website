@@ -1,0 +1,16 @@
+[
+    {
+        "school": "University of Virginia",
+        "program": "College of Arts & Sciences",
+        "majors": ["Computer Science", "Cognitive Science"],
+        "type": "BA",
+        "year_conferred": "2017"
+    }, 
+    {
+        "school": "Boston University",
+        "program": "Metropolitan College",
+        "majors": ["Software Development"],
+        "type": "MS",
+        "year_conferred": "2023"
+    }
+]
