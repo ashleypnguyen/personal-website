@@ -1,5 +1,5 @@
 const renderShib = async () => {
-    const response = await fetch("http://shibe.online/api/shibes?count=50")
+    const response = await fetch("https://shibe.online/api/shibes?count=50")
     const data = await response.json()
  
     var container = document.getElementById("body");
@@ -17,7 +17,7 @@ const renderShib = async () => {
 // renderShib()
 
 const getMoreShib = async () => {
-    const response = await fetch("http://shibe.online/api/shibes?count=3")
+    const response = await fetch("https://shibe.online/api/shibes?count=3")
     const data = await response.json()
 
     data.map((link,i) => {
@@ -27,7 +27,4 @@ const getMoreShib = async () => {
         img.src = link
         document.getElementById('container').prepend(img)
     })
-
-
-
 }
