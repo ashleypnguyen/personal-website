@@ -18,26 +18,29 @@ const renderEducationData = (eduData) => {
         header.textContent = eduObject.school
 
         for (let [key, value] of Object.entries(eduObject)) {
-            // create elements
-            const details = document.createElement("p")
-            details.className += "details"
-            header.appendChild(details)
+            // ignore school since its in the header 
+            if (key !== "school") {
+                // create elements
+                const details = document.createElement("p")
+                details.className += "details"
+                header.appendChild(details)
 
-            // handle special case for array
-            if (key == "majors") {
-                value = value.join(", ")
+                // handle special case for array
+                if (key == "majors") {
+                    value = value.join(", ")
+                }
+
+                // friendly name degree type
+                if (key == "type") {
+                    value = DEGREE_MAP[value] ?? value //if degree was not accounted for in map default to original value
+                }
+
+                // format key nicely
+                key = key.toUpperCase().replace("_", " ")
+
+                // set the text in the html
+                details.textContent = `${key} -- ${value}`
             }
-
-            // friendly name degree type
-            if (key == "type") {
-                value = DEGREE_MAP[value] ?? value //if degree was not accounted for in map default to original value
-            }
-
-            // format key nicely
-            key = key.toUpperCase().replace("_", " ")
-
-            // set the text in the html
-            details.textContent = `${key} -- ${value}`
           }
     })
 }
