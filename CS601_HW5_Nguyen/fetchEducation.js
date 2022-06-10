@@ -45,8 +45,8 @@ const renderEducationData = (eduData) => {
     })
 }
 
-const fetchEducation = (host) => {
-    fetch(`${host}/education.json`)
+const fetchEducation = () => {
+    fetch(`/education.json`)
         .then(response => { 
             if (response.status != 200) {
                 console.error(`Received bad status from url: ${response.status}`)
