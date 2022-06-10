@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ashley Nguyen</title>
+  <meta name="description" content="Ashley Nguyen Education History">
+  <meta name="author" content="apnguyen@bu.edu">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="fetchEducation.js"></script>
+</head>
+
+<body>
+    <!-- Header Bar -->
+    <nav class="navigation">
+    </nav>
+  <!-- Header section -->
+  <header>
+    <div class="header-row">
+        <div class="column">
+            <h1 class="header-text">Ashley's Education History</h1>     
+        </div>
+    </div>
+  </header>
+  <!-- Divider -->
+  <hr class="solid">
+  <main>
+    <!-- Life timeline table -->
+    <div class="main-content-section">
+    <h2 class="header-text" style="text-align: center;">
+      <!-- prevent grabbing duplicate data by disable on first click -->
+      <input class="button" type="button" onclick="this.disabled=true; return fetchEducation()" value="Get Education">
+    </h2>
+    <div id="table-content"></div>
+    <!-- <table id="eduTable">
+        <tr>
+            <td><p id="key"></td>
+            <td><p id="value"></td>
+        </tr>        
+      </table> -->
+    </div>
+    <hr class="solid">
+    </div>
+  </main>
+  <!-- Footer section -->
+  <footer class="footer">
+      <em class="footer-text">Author: Ashley Nguyen</em>
+      <em class="footer-email"><a href="mailto:apnguyen@bu.edu">apnguyen@bu.edu</a></em>
+  </footer>
+</body>
+</html>
