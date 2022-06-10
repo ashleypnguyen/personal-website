@@ -46,7 +46,7 @@ const renderEducationData = (eduData) => {
 }
 
 const fetchEducation = () => {
-    fetch(`https://education-api.netlify.app/education.json`)
+    fetch(`https://ashley-nguyen-hw5.netlify.app/education.json`)
         .then(response => { 
             if (response.status != 200) {
                 console.error(`Received bad status from url: ${response.status}`)
