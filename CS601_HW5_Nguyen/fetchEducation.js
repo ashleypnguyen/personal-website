@@ -1,23 +1,16 @@
-const mockData = [
-    {
-        "school": "University of Virginia",
-        "program": "College of Arts & Sciences",
-        "majors": ["Computer Science", "Cognitive Science"],
-        "type": "BA",
-        "year_conferred": "2017"
-    }, 
-    {
-        "school": "Boston University",
-        "program": "Metropolitan College",
-        "majors": ["Software Development"],
-        "type": "MS",
-        "year_conferred": "2023"
-    }
-]
+const DEGREE_MAP = {
+    "BS": "Bachelor of Science",
+    "MS": "Master of Science",
+    "BA": "Bachelor of Arts"
+}
 
 // Function responsible for handling JSON data to render as HTML
 const renderEducationData = (eduData) => {
     const div = document.getElementById("table-content")
+    const helperText = document.createElement("h4")
+    helperText.className += "helper-text"
+    div.appendChild(helperText)
+    helperText.textContent = "Refresh to hit the button again!"
 
     eduData.forEach( eduObject => {
         const header = document.createElement("h2")
@@ -33,6 +26,11 @@ const renderEducationData = (eduData) => {
             // handle special case for array
             if (key == "majors") {
                 value = value.join(", ")
+            }
+
+            // friendly name degree type
+            if (key == "type") {
+                value = DEGREE_MAP[value] ?? value //if degree was not accounted for in map default to original value
             }
 
             // format key nicely
