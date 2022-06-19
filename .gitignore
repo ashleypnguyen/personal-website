@@ -1,2 +1,4 @@
 .DS_Store
-../CS601_HW6_Nguyen/node_modules
+node_modules/
+node_modules
+../node_modules
