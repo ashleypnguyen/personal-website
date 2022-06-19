@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ashley Nguyen</title>
+  <meta name="description" content="Ashley Nguyen Portfolio project">
+  <meta name="author" content="apnguyen@bu.edu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn.dribbble.com/users/722835/screenshots/2713044/media/f22d35efed8c07cf92975e740220aa89.gif" type="image/gif" sizes="16x16">
+  <script src="scripts/gallery.js"></script>
+</head>
+
+<body onload="javascript:showSlides(1)">
+  <!-- Navigation Bar -->
+  <nav class="navigation">
+    <a href="index.html">home</a>
+    <a href="about.html">about</a>
+    <a href="gallery.html">gallery</a>
+    <a href="contact.html">contact</a>
+    <a href="shiba.html">shibas</a>
+  </nav>
+  <!-- Header section -->
+  <header>
+    <div class="header-center">
+      <h1 style="text-align: center;">Gallery</h1>
+    </div>
+  </header>
+  <hr class="solid">
+  <!-- Main -->
+  <main>
+    <div class="gallery">
+      <div class="slide">
+        <img class="gallery-img" src="images/ashley-fuji.jpg" alt="Girl and corgi puppy in matching sweaters" style="width:100%;"/>
+      </div>
+    
+      <div class="slide">
+        <img class="gallery-img" src="images/ashley-canada.png" alt="Girl at sunrise at a lake with mountains" style="width:100%"/>
+      </div>
+    
+      <div class="slide">
+        <img class="gallery-img" src="images/ashley-surf.png" alt="Girl surfing in hawaii" style="width:100%" />
+      </div>
+        
+      <div class="slide">
+        <img class="gallery-img" src="images/corgi.jpg" alt="Corgi Puppy on a rock" style="width:100%" />
+      </div>
+    
+      <div class="slide">
+        <iframe style="width:100%;height:500px;" src="https://www.youtube.com/embed/rd_sqHOczKM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+        
+      <div class="slide">
+        <video class="gallery-img" style="width:100%" controls>
+          <source src="images/pingpong.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+        
+      <a class="gallery-prev" onclick="moveSlides(-1)">❮</a>
+      <a class="gallery-next" onclick="moveSlides(1)">❯</a>
+
+    </div>
+    </div> 
+  </main>
+  <!-- Footer section -->
+  <footer class="footer">
+    <em class="footer-text">Author: Ashley Nguyen</em>
+    <em class="footer-email"><a href="mailto:apnguyen@bu.edu">apnguyen@bu.edu</a></em>
+  </footer>
+</body>
+</html>
