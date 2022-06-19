@@ -5,4 +5,4 @@ Ashley Nguyen personal website portfolio. Used as the term project for BU MET CS
 
 The website is also publicly hosted at: 
 
-`TBD`
+`https://ashleynguyen.netlify.app/`
