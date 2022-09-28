@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ashley Nguyen</title>
+    <meta name="description" content="Ashley Nguyen Portfolio project" />
+    <meta name="author" content="apnguyen@bu.edu" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.dribbble.com/users/722835/screenshots/2713044/media/f22d35efed8c07cf92975e740220aa89.gif"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <script src="scripts/timestamp.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="gallery.html">gallery</a>
+      <a href="contact.html">contact</a>
+      <a href="shiba.html">shibas</a>
+      <a href="timestamp.html">timestamp tool</a>
+    </nav>
+    <!-- Header section -->
+    <header>
+      <div class="header-row">
+        <div class="column" style="text-align: center">
+          <h1 class="header-text">UTC to Local timestamp converter</h1>
+          <h4 class="header-text">
+            Accepts ISO-8601 formatted timestamps i.e. "2022-09-27T05:42:00Z"
+          </h4>
+          <input
+            class="input-timestamp"
+            type="text"
+            id="input-timestamp"
+            style="width: 300px"
+          />
+          <input
+            class="input-timestamp"
+            type="button"
+            value="Submit"
+            onclick="return convertToLocal()"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <div
+        id="result-container"
+        class="result-container"
+        style="text-align: center"
+      ></div>
+
+      <h3 id="utc-header" style="text-align: center; font-size: large"></h3>
+      <h2 id="utc-container" style="text-align: center; font-size: medium"></h2>
+
+      <h3 id="local-header" style="text-align: center; font-size: large"></h3>
+      <h2
+        id="local-container"
+        style="text-align: center; font-size: medium"
+      ></h2>
+
+      <h3 id="pst-header" style="text-align: center; font-size: large"></h3>
+      <h2 id="pst-container" style="text-align: center; font-size: medium"></h2>
+    </main>
+    <hr class="solid" />
+    <!-- Footer section -->
+    <footer class="footer">
+      <em class="footer-text">Author: Ashley Nguyen</em>
+      <em class="footer-email"
+        ><a href="mailto:apnguyen@bu.edu">apnguyen@bu.edu</a></em
+      >
+    </footer>
+  </body>
+</html>
